@@ -2,6 +2,7 @@ import "@expo/metro-runtime";
 
 import { ExpoRoot } from "expo-router";
 import Head from "expo-router/head";
+import { RecoilRoot } from "recoil";
 
 import { renderRootComponent } from "./src/renderRootComponent";
 
@@ -15,7 +16,9 @@ const ctx = require.context(process.env.EXPO_ROUTER_APP_ROOT);
 export function App() {
   return (
     <HeadProvider>
-      <ExpoRoot context={ctx} />
+      <RecoilRoot>
+        <ExpoRoot context={ctx} />
+      </RecoilRoot>
     </HeadProvider>
   );
 }
