@@ -1,1 +1,0 @@
-export { loadBundleAsync } from "./loadBundlePolyfill";
